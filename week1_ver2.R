@@ -9,8 +9,8 @@ theme_set(theme_minimal(base_size = 12))
 # ---- Helper function ----
 # Save ggplot as JPEG
 save_plot_jpg <- function(p, name, width = 8, height = 5, dpi = 300) {
-  dir.create("outputs", showWarnings = FALSE)
-  path <- file.path("outputs", paste0(name, ".jpeg"))
+  dir.create("outputs.week1", showWarnings = FALSE)
+  path <- file.path("outputs.week1", paste0(name, ".jpeg"))
   cowplot::save_plot(filename = path, plot = p, base_width = width, base_height = height, dpi = dpi)
   message("Saved: ", path)
 }
